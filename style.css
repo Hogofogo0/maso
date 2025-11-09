@@ -1,0 +1,142 @@
+/* load Latin Modern Roman from jsDelivr (webfont kit) */
+/* Latin Modern Roman WITH Czech support */
+@import url("https://fonts.cdnfonts.com/css/latin-modern-math");
+
+.topbar {
+  position: fixed;
+  top: -3px;
+  right: 20px;
+  z-index: 10;
+}
+.topbar20 {
+  position: fixed;
+  top: 15px;
+  right: 150px;
+  z-index: 10;
+}
+.leftbar {
+  position: fixed;
+  top: 15px;
+  left: 20px;
+  z-index: 10;
+}
+body,
+h1,
+.num,
+.lbl,
+.subtitle {
+  font-weight: 400 !important;
+}
+.logo {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  cursor: default;
+}
+.logo20 {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  cursor: default;
+}
+body {
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* ✅ Full-viewport canvas */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ✅ Background + global text style */
+body {
+  background: linear-gradient(180deg, #0066bf 0%, #3bbcf7 100%);
+  color: #e6eef8;
+  text-align: center;
+}
+
+/* ✅ Make container itself centered + no strange margins */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: max-content; /* prevents stretching left */
+  gap: 18px;
+}
+
+/* Typography */
+h1 {
+  font-size: 42px;
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 18px;
+  color: var(--muted, #ffffff);
+  margin: 0 0 12px 0;
+}
+
+/* Countdown layout */
+.countdown {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.unit {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 18px 22px;
+  border-radius: 12px;
+  min-width: 110px;
+}
+
+.num {
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--accent, #6ee7b7);
+}
+
+.lbl {
+  font-size: 14px;
+  color: var(--muted, #ffffff);
+}
+
+/* SVG block */
+.svg-wrap {
+  margin-top: 10px;
+}
+
+svg {
+  width: 240px;
+}
+/* hlavní nastavení (přepište staré font-family) */
+:root {
+  --accent: #6ee7b7;
+  --muted: #ffffff;
+}
+
+body,
+html,
+h1,
+.num,
+.lbl,
+.subtitle {
+  font-family: "Latin Modern Math", sans-serif;
+  font-weight: 400;
+}
+
+/* tabulární čísla pro odpočet */
+.num {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1;
+}
