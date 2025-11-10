@@ -3,7 +3,7 @@
 @import url("https://fonts.cdnfonts.com/css/latin-modern-math");
 
 iframe {
- max-width: 300px;
+  max-width: 300px;
 }
 
 .topbar {
@@ -24,6 +24,7 @@ iframe {
   left: 20px;
   z-index: 10;
 }
+
 body,
 h1,
 .num,
@@ -31,6 +32,7 @@ h1,
 .subtitle {
   font-weight: 400 !important;
 }
+
 .logo {
   width: 50px;
   height: 50px;
@@ -43,46 +45,27 @@ h1,
   object-fit: contain;
   cursor: default;
 }
-body {
-  font-optical-sizing: auto;
-  font-weight: 600;
-  font-style: normal;
+
+/* hlavní nastavení (přepište staré font-family) */
+:root {
+  --accent: #6ee7b7;
+  --muted: #ffffff;
 }
 
-/* ✅ Full-viewport canvas */
+/* tabulární čísla pro odpočet */
+.num {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1;
+}
+
+body,
 html,
-body {
-  margin: 0;
-  padding: 0;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* ✅ Background + global text style */
-body {
-  background: linear-gradient(180deg, #0066bf 0%, #3bbcf7 100%);
-  color: #e6eef8;
-  text-align: center;
-}
-.mcon {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  width: max-content; /* prevents stretching left */
-  gap: 18px;
-}
-/* ✅ Make container itself centered + no strange margins */
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: max-content; /* prevents stretching left */
-  gap: 18px;
+h1,
+.num,
+.lbl,
+.subtitle {
+  font-family: "Latin Modern Math", sans-serif;
+  font-weight: 400;
 }
 
 /* Typography */
@@ -97,22 +80,18 @@ h1 {
   margin: 0 0 12px 0;
 }
 
+/* SVG block */
+.svg-wrap {
+  margin-top: 10px;
+}
+svg {
+  width: 240px;
+}
+
 /* Countdown layout */
 .countdown {
   display: flex;
   gap: 20px;
-  justify-content: center;
-}
-
-.spotify {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-}
-
-.middle {
-  dislay: flex;
-  gap: 50px;
   justify-content: center;
 }
 
@@ -129,38 +108,60 @@ h1 {
   font-weight: 700;
   color: var(--accent, #6ee7b7);
 }
-
 .lbl {
   font-size: 14px;
   color: var(--muted, #ffffff);
 }
 
-/* SVG block */
-.svg-wrap {
-  margin-top: 10px;
+/* new two-column layout with spotify on the right */
+.main-row {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
 }
 
-svg {
-  width: 240px;
-}
-/* hlavní nastavení (přepište staré font-family) */
-:root {
-  --accent: #6ee7b7;
-  --muted: #ffffff;
+.left-column,
+.right-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-body,
-html,
-h1,
-.num,
-.lbl,
-.subtitle {
-  font-family: "Latin Modern Math", sans-serif;
-  font-weight: 400;
+.left-column {
+  flex: 2; /* main content wider */
 }
 
-/* tabulární čísla pro odpočet */
-.num {
-  font-variant-numeric: tabular-nums;
-  font-feature-settings: "tnum" 1;
+.right-column {
+  flex: 1; /* Spotify column */
+}
+
+/* Optional: match background + global align */
+body {
+  background: linear-gradient(180deg, #0066bf 0%, #3bbcf7 100%);
+  color: #e6eef8;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  /* Removed display:flex for body, now handled by .main-row */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+  gap: 18px;
+}
+
+.spotify {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  justify-content: flex-start;
 }
