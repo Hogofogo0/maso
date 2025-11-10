@@ -2,6 +2,10 @@
 /* Latin Modern Roman WITH Czech support */
 @import url("https://fonts.cdnfonts.com/css/latin-modern-math");
 
+iframe {
+ max-width: 300px;
+}
+
 .topbar {
   position: fixed;
   top: -3px;
