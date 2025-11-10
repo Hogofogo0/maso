@@ -10,6 +10,7 @@ function pad(n) {
 
 async function playAudio(){
   await audio.play();
+  setTimeout(400);
 }
 
 function updateCountdown() {
