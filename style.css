@@ -5,6 +5,7 @@
 iframe {
   max-width: 300px;
   margin-top: 20vh;
+  margin-right: 3vw;
   height: 70vh;
   min-width: 35vw;
 }
