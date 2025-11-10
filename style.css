@@ -110,6 +110,7 @@ h1 {
   padding: 18px 22px;
   border-radius: 12px;
   min-width: 110px;
+  max-height: 110px;
 }
 
 .num {
