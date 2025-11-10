@@ -9,9 +9,8 @@ iframe {
   min-width: 35vw;
 }
 #sit {
-  max-width: 300px;
   margin-top: 20vh;
-  margin-right: 3vw;
+  margin-right: 2vw;
   height: 70vh;
   min-width: 35vw;
 }
@@ -130,7 +129,7 @@ svg {
   height: 100vh;
   justify-content: center;
   align-items: flex-start;
-  gap: 40px;
+  gap: 0;
 }
 
 .left-column,
@@ -141,7 +140,7 @@ svg {
 }
 
 .left-column {
-  flex: 2; /* main content wider */
+  flex: 1; /* main content wider */
   margin-top: 10vh;
 }
 
