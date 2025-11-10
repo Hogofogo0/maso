@@ -8,6 +8,10 @@ function pad(n) {
   return String(n).padStart(2, "0");
 }
 
+async function playAudio(){
+  await audio.play();
+}
+
 function updateCountdown() {
   const now = new Date();
   let diff = TARGET_DATE - now;
@@ -25,8 +29,8 @@ function updateCountdown() {
   minutesEl.textContent = pad(minutes);
   secondsEl.textContent = pad(seconds);
   if(seconds == 0 || minutes == 0) {
-    audio.play();
-    window.location.replace("https://docs.google.com/presentation/d/1AmyAQs8LR-B7KB6GSVj5piJiktSVsFFFday-b2NCIXE/present?slide=id.g2c19ced0f24_0_100#slide=id.g2c19ced0f24_0_100");
+    
+    playAudio().then(result => window.location.replace("https://docs.google.com/presentation/d/1AmyAQs8LR-B7KB6GSVj5piJiktSVsFFFday-b2NCIXE/present?slide=id.g2c19ced0f24_0_100#slide=id.g2c19ced0f24_0_100"));
   }
 }
 
