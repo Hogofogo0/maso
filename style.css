@@ -63,7 +63,14 @@ body {
   color: #e6eef8;
   text-align: center;
 }
-
+.mcon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: max-content; /* prevents stretching left */
+  gap: 18px;
+}
 /* ✅ Make container itself centered + no strange margins */
 .container {
   display: flex;
