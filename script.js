@@ -12,7 +12,7 @@ function pad(n) {
 async function playAudio(){
   await metalPipe.play();
   await setTimeout(async ()=>{await airport.play();
-                       await setTimeout(async () => {window.location.replace("https://docs.google.com/presentation/d/1AmyAQs8LR-B7KB6GSVj5piJiktSVsFFFday-b2NCIXE/present?slide=id.g2c19ced0f24_0_100#slide=id.g2c19ced0f24_0_100");}, 36000);},2900);
+                       await setTimeout(async () => {window.location.replace("https://docs.google.com/presentation/d/1AmyAQs8LR-B7KB6GSVj5piJiktSVsFFFday-b2NCIXE/present?slide=id.g2c19ced0f24_0_100#slide=id.g2c19ced0f24_0_100");}, 23400);},2900);
   
   
 }
