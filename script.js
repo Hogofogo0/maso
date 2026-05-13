@@ -1,5 +1,5 @@
 // Countdown target: 12.11.2025 09:20 (local time)
-const TARGET_DATE = new Date("2026-05-13T08:00:00");
+const TARGET_DATE = new Date("2026-05-13T08:01:30");
 const metalPipe = new Audio("https://github.com/Hogofogo0/maso/raw/refs/heads/main/assets/jixaw-metal-pipe-falling-sound.mp3");
 const airport = new Audio("https://github.com/Hogofogo0/maso/raw/refs/heads/main/airport.mp3");
 const minutesEl = document.getElementById("minutes");
