@@ -14,8 +14,12 @@ async function playAudio(){
   minutesEl.textContent = pad(0);
   secondsEl.textContent = pad(0);
   await metalPipe.play();
-  await setTimeout(async ()=>{await start.play();
-                       await setTimeout(async () => {window.location.replace("https://docs.google.com/presentation/d/1ALnSbP9YxQT8qfC65mljxyz3c8Oqz4GHFVNlOrym7YY/present?slide=id.g2c19ced0f24_0_100#slide=id.g2c19ced0f24_0_100");}, 18000);},2900);
+  await setTimeout(async () => {
+  	await start.play();
+  	await setTimeout(async () => {
+  		window.location.replace("https://docs.google.com/presentation/d/1ALnSbP9YxQT8qfC65mljxyz3c8Oqz4GHFVNlOrym7YY/present?slide=id.g2c19ced0f24_0_100#slide=id.g2c19ced0f24_0_100");
+  	}, 18000);
+  }, 2900);
   
   
 }
