@@ -1,7 +1,7 @@
 // Countdown target: 12.11.2025 09:20 (local time)
 const TARGET_DATE = new Date("2026-05-13T09:15:00");
 const metalPipe = new Audio("https://github.com/Hogofogo0/maso/raw/refs/heads/main/assets/jixaw-metal-pipe-falling-sound.mp3");
-const airport = new Audio("https://github.com/Hogofogo0/maso/raw/refs/heads/main/start.mp3");
+const start = new Audio("https://github.com/Hogofogo0/maso/raw/refs/heads/main/start.mp3");
 const minutesEl = document.getElementById("minutes");
 const secondsEl = document.getElementById("seconds");
 
@@ -14,7 +14,7 @@ async function playAudio(){
   minutesEl.textContent = pad(0);
   secondsEl.textContent = pad(0);
   await metalPipe.play();
-  await setTimeout(async ()=>{await airport.play();
+  await setTimeout(async ()=>{await start.play();
                        await setTimeout(async () => {window.location.replace("https://docs.google.com/presentation/d/1ALnSbP9YxQT8qfC65mljxyz3c8Oqz4GHFVNlOrym7YY/present?slide=id.g2c19ced0f24_0_100#slide=id.g2c19ced0f24_0_100");}, 18000);},2900);
   
   
