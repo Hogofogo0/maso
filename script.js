@@ -18,7 +18,7 @@ async function playAudio(){
   await setTimeout(async () => {
   	await start.play();
   	await setTimeout(async () => {
-  		window.location.replace("https://docs.google.com/presentation/d/1ALnSbP9YxQT8qfC65mljxyz3c8Oqz4GHFVNlOrym7YY/present?slide=id.g2c19ced0f24_0_100#slide=id.g2c19ced0f24_0_100");
+  		window.location.replace("https://docs.google.com/presentation/d/1FlNdqHvz3RDprmO0H6jTuHZTyQf67O70AuJjptzc2uU/present?slide=id.g2c19ced0f24_0_100#slide=id.g2c19ced0f24_0_100");
   	}, 18000);
   }, 2900);
   
